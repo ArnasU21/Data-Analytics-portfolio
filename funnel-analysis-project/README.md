@@ -12,6 +12,8 @@ The findings will help the business optimize user experience, improve conversion
 
 SQL was used as the primary data transformation layer, while Excel was used for visualization and final presentation of insights.
 
+![image alt](https://github.com/ArnasU21/Data-Analytics-portfolio/blob/ed62d62f6aaebd078cc4b1ed2f37269614ab45c7/funnel-analysis-project/funnel_dashboard.png)
+
 ## 🔄 **Funnel Definition & Validation**
 
 The funnel stages were defined based on a typical e-commerce user journey, where each event represents a key step toward completing a purchase.
