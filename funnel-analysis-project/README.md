@@ -161,7 +161,14 @@ Recommended actions:
 
 👉 **Expected outcome:** Ongoing improvements in conversion rates and long-term revenue growth.
 
-## Files
-- SQL queries
-- Excel dashboard
-- Dashboard screenshots
+## 📂 Files
+
+- 📄 **SQL queries**
+  - [General Funnel Analysis](general_funnel_analysis.sql)
+  - [Country Funnel Analysis](country_funnel_analysis.sql)
+
+- 📊 **Excel dashboard**
+  - [Funnel Analysis Dashboard](Funnel%20analysis%20project.xlsx)
+
+- 🖼 **Dashboard screenshot**
+  - [View Dashboard Image](funnel_dashboard.png)
