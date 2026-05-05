@@ -6,11 +6,14 @@ Although traffic levels are high, only a small percentage of users complete a pu
 The objective of this analysis is to evaluate user behavior across key funnel stages (page view → product view → add to cart → checkout → purchase), identify critical drop-off points, and uncover differences in performance across key markets (Canada, India, and the United States).
 The findings will help the business optimize user experience, improve conversion rates, and make more effective marketing and product decisions.
 
-## Tools Used
-- SQL  
-- Excel  
+## 🛠 Tools Used
 
-SQL was used as the primary data transformation layer, while Excel was used for visualization and final presentation of insights.
+- SQL  
+  Used to extract and transform raw event-level data, define funnel stages, and calculate user counts at each step of the funnel.  
+  Queries were written following standard SQL formatting practices to ensure readability, consistency, and maintainability.
+
+- Excel  
+  Used to organize the processed data, perform drop-off calculations, and build the final funnel dashboard with visualizations and country-level comparisons.
 
 ## 📊 Dashboard Preview
 
