@@ -1,5 +1,11 @@
 # Funnel Analysis Project
 
+## 📝 Project Background
+
+This project was initially developed as part of my studies at Turing College.  
+
+It has since been significantly refined and expanded based on my growing experience in data analytics, including improvements in SQL structure, data modeling, visualization, and business-oriented insights.
+
 ## Business Problem
 An e-commerce company is experiencing low conversion rates and wants to understand where users drop off during the purchase journey.
 Although traffic levels are high, only a small percentage of users complete a purchase. The business suspects that friction within the user journey — from product discovery to checkout — is limiting revenue growth.
