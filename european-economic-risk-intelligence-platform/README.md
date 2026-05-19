@@ -125,19 +125,19 @@ Deep-dive analytical dashboard exploring:
 
 ## Executive Overview
 
-![Executive Overview](dashboard_screenshots/Screenshot-%20Executive%20Overview.png)
+![Executive Overview](dashboard_screenshots/executive-overview.png)
 
 ---
 
 ## Forecast & Scenario Analysis
 
-![Forecast & Scenario Analysis](dashboard_screenshots/Screenshot-%20Forcast%20&%20Scenario%20Analysis.png)
+![Forecast & Scenario Analysis](dashboard_screenshots/forecast-scenario-analysis.png)
 
 ---
 
 ## Macroeconomic Drivers & Risk Diagnostics
 
-![Macroeconomic Drivers & Risk Diagnostics](dashboard_screenshots/Screenshot-%20Macroeconomic%20Drivers%20and%20Risk%20Diagnostics.png)
+![Macroeconomic Drivers & Risk Diagnostics](dashboard_screenshots/macroeconomic-risk-diagnostics.png)
 
 ---
 
@@ -231,7 +231,7 @@ The integration of forecasting, simulation, and business intelligence dashboards
 
 # 👤 Author
 
-**ArnasU21**
+**Arnas Ulvydas**
 
 Portfolio project focused on:
 - Economic Risk Analytics
