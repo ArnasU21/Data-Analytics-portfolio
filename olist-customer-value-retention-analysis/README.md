@@ -6,7 +6,7 @@ Advanced SQL and Power BI portfolio project analyzing customer value, revenue be
 
 This project analyzes Olist's Brazilian e-commerce marketplace data to understand how customers generate revenue over time, how strong repeat-purchase behavior is, and which customer groups drive the most business value.
 
-The analysis goes beyond basic sales reporting. It focuses on customer-level analytics using SQL, cohort analysis, revenue-based customer lifetime value, RFM-style segmentation, and an executive Power BI dashboard.
+The analysis goes beyond basic sales reporting. It focuses on customer-level analytics using SQL, cohort analysis, revenue-based customer lifetime value, RFM-style segmentation, Excel cohort heatmaps, and an executive Power BI dashboard.
 
 ## Business Objective
 
@@ -133,6 +133,104 @@ The Power BI dashboard summarizes the business story through:
 | Max Revenue LTV | R$13.66K |
 | Repeat Buyer Segment % | 1.35% |
 
+## Dashboard and Cohort Analysis
+
+### Power BI Executive Overview
+
+![Power BI Overview Dashboard](screenshots-bi-dashboard/overview-dashboard.png)
+
+The executive overview summarizes marketplace performance across revenue, orders, customers, geography, product categories, and monthly trends.
+
+Key insights:
+
+- Total delivered-order revenue reached **R$15.38M** during the analysis window.
+- Olist processed approximately **96K delivered orders** from about **93K unique customers**.
+- Average order value was **R$159.81**.
+- Revenue grew strongly through 2017 and stabilized during 2018.
+- Sao Paulo generated the highest revenue, showing strong geographic concentration.
+- Top product categories such as health_beauty, watches_gifts, bed_bath_table, sports_leisure, and computers_accessories contributed heavily to total revenue.
+
+Business interpretation:
+
+Olist's revenue base is broad, but performance is concentrated by geography and product category. This suggests that growth strategy should not treat all states and product categories equally. High-performing states and categories should be prioritized for logistics, seller partnerships, and targeted marketing.
+
+---
+
+### Power BI Customer Segmentation
+
+![Power BI Customer Segmentation Dashboard](screenshots-bi-dashboard/customer-segmentation-dashboard.png)
+
+The customer segmentation page focuses on customer value, retention behavior, and RFM-style customer groups.
+
+Key insights:
+
+- The **Repeat Buyer** segment is very small, representing only **1.35%** of customers.
+- Average revenue LTV is **R$165.15**, while median revenue LTV is **R$107.78**, showing that higher-value customers pull the average upward.
+- High Value Customers generate the largest share of revenue despite being a smaller customer group.
+- Recent and Dormant One-Time Buyers make up a large portion of the customer base.
+- Repeat Buyers are small in count, which confirms weak repeat-purchase behavior.
+
+Business interpretation:
+
+The segmentation shows that Olist is highly acquisition-driven. Most customers buy once, while a smaller high-value group drives a disproportionate share of revenue. The biggest business opportunity is improving second-purchase conversion, especially among recent one-time buyers.
+
+---
+
+### Monthly Average Revenue Per Original Cohort Customer
+
+![Monthly Average Revenue Cohort](cohort-analysis-excel/screenshots/monthly-average-revenue-cohort.png)
+
+This cohort heatmap shows the monthly average revenue generated per original cohort customer.
+
+Key insights:
+
+- Month 0 generates the highest revenue for almost every cohort.
+- Revenue after the first purchase is much smaller and inconsistent.
+- Later-month revenue exists, but it is not strong enough to suggest healthy repeat-purchase behavior.
+- The pattern confirms that most customer value is captured at acquisition.
+
+Business interpretation:
+
+Olist customers tend to generate most of their value during the first purchase. This makes customer acquisition important, but it also creates a retention risk: if the business cannot encourage second purchases, long-term customer value remains limited.
+
+---
+
+### Cumulative Average Revenue Per Original Cohort Customer
+
+![Cumulative Average Revenue Cohort](cohort-analysis-excel/screenshots/cumulative-average-revenue-cohort.png)
+
+This cohort table shows cumulative revenue per original cohort customer over time.
+
+Key insights:
+
+- Cumulative revenue increases slowly after Month 0.
+- Older cohorts have more observable months, which makes their long-term value easier to evaluate.
+- The cumulative trend confirms that incremental customer value after first purchase is limited.
+- Most cohorts show gradual growth rather than strong repeat revenue acceleration.
+
+Business interpretation:
+
+Cumulative LTV growth is present, but weak. This supports the conclusion that Olist should focus on retention campaigns, reorder incentives, and personalized follow-up offers to improve post-acquisition revenue.
+
+---
+
+### Forecasted Cumulative Revenue
+
+![Forecasted Cumulative Revenue](cohort-analysis-excel/screenshots/forecasted-cumulative-revenue.png)
+
+The forecasted cumulative revenue view extends observed cohort behavior using average monthly growth patterns.
+
+Key insights:
+
+- Forecasted values suggest modest future cumulative revenue growth.
+- Newer cohorts can be projected forward using patterns from older cohorts.
+- Forecasting helps estimate future customer value even when later months are not yet fully observable.
+- The forecast still shows that growth after Month 0 is relatively slow.
+
+Business interpretation:
+
+Forecasting reinforces the retention opportunity. If Olist improves repeat-purchase behavior, future cohort curves should become steeper and cumulative customer value should increase more meaningfully over time.
+
 ## Key Findings
 
 ### 1. Olist is heavily driven by first purchases
@@ -242,19 +340,18 @@ A successful retention strategy focused on high-value customers and recent one-t
 ```text
 olist-customer-value-retention-analysis/
 |-- README.md
-|-- sql/
+|-- SQL queries/
 |   |-- 01_data_cleaning_and_eda.sql
 |   |-- 02_customer_cohort_retention.sql
 |   |-- 03_customer_lifetime_value.sql
 |   |-- 04_customer_segmentation_rfm.sql
 |   `-- 05_powerbi_dashboard_queries.sql
-|-- docs/
-|   |-- data_dictionary.md
-|   `-- dashboard_build_notes.md
-|-- reports/
-|   |-- powerbi/
-|   |   `-- olist_customer_value_dashboard.pbix
-|   `-- excel/
-|       `-- olist_ltv_cohort_analysis.xlsx
-`-- data/
-    `-- raw/
+|-- cohort-analysis-excel/
+|   |-- olist_cohort_analysis.xlsx
+|   `-- screenshots/
+|       |-- monthly-average-revenue-cohort.png
+|       |-- cumulative-average-revenue-cohort.png
+|       `-- forecasted-cumulative-revenue.png
+`-- screenshots-bi-dashboard/
+    |-- overview-dashboard.png
+    `-- customer-segmentation-dashboard.png
